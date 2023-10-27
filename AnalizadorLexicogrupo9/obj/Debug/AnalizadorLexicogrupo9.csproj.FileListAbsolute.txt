@@ -1,0 +1,10 @@
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\bin\Debug\AnalizadorLexicogrupo9.exe.config
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\bin\Debug\AnalizadorLexicogrupo9.exe
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\bin\Debug\AnalizadorLexicogrupo9.pdb
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.csproj.AssemblyReference.cache
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.Form1.resources
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.Properties.Resources.resources
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.csproj.GenerateResource.cache
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.csproj.CoreCompileInputs.cache
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.exe
+C:\Users\i7\source\repos\AnalizadorLexicogrupo9\AnalizadorLexicogrupo9\obj\Debug\AnalizadorLexicogrupo9.pdb

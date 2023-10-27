@@ -28,42 +28,51 @@ namespace AnalizadorLexicogrupo9
         private void ParseCPlusPlusCode(string code)
         {
             // Define patrones regex para diferentes componentes
-            string keywordPattern = @"\b(while|for|if|else|return|cout|cin)\b";
-            string identifierPattern = @"[a-zA-Z_]\w*";
-            string constantPattern = @"\d+";
-            string operatorPattern = @"(\+|\-|\*|\/|\%|==|!=|<=|>=|<|>)";
+            string keywordPattern = @"\b(while|for|if|else|return|cout|cin|int|float|double|char|void|main|class|public|private|protected|struct|new|delete|switch|case|break|continue|static|extern|const|inline|friend|typedef)\b";
+    string identifierPattern = @"[a-zA-Z_]\w*";
+    string constantPattern = @"(\d+\.\d*|\d*\.\d+|\d+)";
+    string operatorPattern = @"(\+|\-|\*|\/|\%|==|!=|<=|>=|<|>|=|\+\+|\-\-|\+=|-=|\*=|\/=|%=|\^|\&|\||\~|<<|>>|&&|\|\||!|<<=|>>=|&=|\|=|\^=|::)";
+    string stringPattern = @"""[^""]*"""; // Cadena de texto entre comillas
 
-            // Combinar todos los patrones en uno solo
-            string combinedPattern = string.Format("({0})|({1})|({2})|({3})",
-                keywordPattern, identifierPattern, constantPattern, operatorPattern);
 
-            // Realizar coincidencias usando el patrón
-            MatchCollection matches = Regex.Matches(code, combinedPattern);
+    string combinedPattern = string.Format("({0})|({1})|({2})|({3})|({4})|",
+        keywordPattern, identifierPattern, constantPattern, operatorPattern, stringPattern);
 
-            // Resaltar componentes y mostrarlos en la segunda RichTextBox
-            txt2.Clear();
-            foreach (Match match in matches)
-            {
-                if (match.Groups[1].Success) // Palabra clave
-                {
-                    txt2.SelectionColor = System.Drawing.Color.Blue;
-                    txt2.AppendText(match.Value + " = palabra reservada\n");
-                }
-                else if (match.Groups[2].Success) // Identificador
-                {
-                    txt2.SelectionColor = System.Drawing.Color.Black;
-                    txt2.AppendText(match.Value + " = identificador\n");
-                }
-                else if (match.Groups[3].Success) // Constante numérica
-                {
-                    txt2.SelectionColor = System.Drawing.Color.Red;
-                    txt2.AppendText(match.Value + " = constante numérica\n");
-                }
-                else if (match.Groups[4].Success) // Operador
-                {
-                    txt2.SelectionColor = System.Drawing.Color.Green;
-                    txt2.AppendText(match.Value + " = operador\n");
-                }
+    MatchCollection matches = Regex.Matches(code, combinedPattern);
+
+    txt2.Clear();
+    foreach (Match match in matches)
+    {
+        if (match.Groups[1].Success)
+        {
+            txt2.SelectionColor = System.Drawing.Color.Blue;
+            txt2.AppendText(match.Value + " = palabra reservada\n");
+        }
+        else if (match.Groups[2].Success)
+        {
+            txt2.SelectionColor = System.Drawing.Color.Black;
+            txt2.AppendText(match.Value + " = identificador\n");
+        }
+        else if (match.Groups[3].Success)
+        {
+            txt2.SelectionColor = System.Drawing.Color.Red;
+            txt2.AppendText(match.Value + " = constante numérica\n");
+        }
+        else if (match.Groups[4].Success)
+        {
+            txt2.SelectionColor = System.Drawing.Color.Green;
+            txt2.AppendText(match.Value + " = operador\n");
+        }
+        else if (match.Groups[5].Success)
+        {
+            txt2.SelectionColor = System.Drawing.Color.Purple;
+            txt2.AppendText(match.Value + " = cadena de texto\n");
+        }
+        else if (match.Groups[6].Success)
+        {
+            txt2.SelectionColor = System.Drawing.Color.Orange;
+            txt2.AppendText(match.Value + " = directiva del preprocesador\n");
+        }
             }
         }
 
@@ -74,10 +83,13 @@ namespace AnalizadorLexicogrupo9
             string identifierPatternj = @"[a-zA-Z_]\w*";
             string constantPatternj = @"\b(true|false|null)\b";
             string operatorPatternj = @"(\+|\-|\*|/|%|==|!=|<=|>=|<|>|=)";
+            string commentPatternj = @"\/\/.*|\/\*[\s\S]*?\*\/";
+            string stringPatternj = "\"(\\.|[^\"])*\"";
+            string numberPatternj = @"\b\d+(\.\d+)?\b";
 
             // Combinar todos los patrones en uno solo
-            string combinedPatternj = string.Format("({0})|({1})|({2})|({3})",
-                keywordPatternj, identifierPatternj, constantPatternj, operatorPatternj);
+            string combinedPatternj = string.Format("({0})|({1})|({2})|({3})|({4})|({5})",
+                keywordPatternj, identifierPatternj, constantPatternj, operatorPatternj, commentPatternj, stringPatternj, numberPatternj);
 
             // Realizar coincidencias usando el patrón
             MatchCollection matchesj = Regex.Matches(codej, combinedPatternj);
@@ -105,6 +117,21 @@ namespace AnalizadorLexicogrupo9
                 {
                     txt2.SelectionColor = System.Drawing.Color.Green;
                     txt2.AppendText(matchj.Value + " = operador\n");
+                }
+                else if (matchj.Groups[5].Success) // Comentario
+                {
+                    txt2.SelectionColor = System.Drawing.Color.Gray;
+                    txt2.AppendText(matchj.Value + " = comentario\n");
+                }
+                else if (matchj.Groups[6].Success) // Cadena
+                {
+                    txt2.SelectionColor = System.Drawing.Color.Purple;
+                    txt2.AppendText(matchj.Value + " = cadena\n");
+                }
+                else if (matchj.Groups[7].Success) // Número
+                {
+                    txt2.SelectionColor = System.Drawing.Color.Orange;
+                    txt2.AppendText(matchj.Value + " = número\n");
                 }
             }
         }

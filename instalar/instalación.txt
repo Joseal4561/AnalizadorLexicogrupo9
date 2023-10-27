@@ -1,0 +1,1 @@
+asegurarse de tener application files, analizadorLexicogrupo9 y setup en la misma carpeta, y ejecutar setup

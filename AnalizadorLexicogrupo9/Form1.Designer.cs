@@ -30,12 +30,12 @@
         {
             this.txt1 = new System.Windows.Forms.RichTextBox();
             this.txt2 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.cb = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt1
@@ -54,26 +54,6 @@
             this.txt2.TabIndex = 1;
             this.txt2.Text = "";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(89, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 60);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "NUEVO";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(193, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 60);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "ABRIR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // cb
             // 
             this.cb.FormattingEnabled = true;
@@ -86,35 +66,60 @@
             this.cb.TabIndex = 4;
             this.cb.Text = "Elija lenguaje";
             // 
-            // button3
+            // button5
             // 
-            this.button3.Location = new System.Drawing.Point(480, 59);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 60);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "ANALIZAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Image = global::AnalizadorLexicogrupo9.Properties.Resources._66847;
+            this.button5.Location = new System.Drawing.Point(668, 54);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(83, 71);
+            this.button5.TabIndex = 7;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(575, 59);
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Image = global::AnalizadorLexicogrupo9.Properties.Resources._2371021_200;
+            this.button4.Location = new System.Drawing.Point(571, 54);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 60);
+            this.button4.Size = new System.Drawing.Size(82, 71);
             this.button4.TabIndex = 6;
-            this.button4.Text = "GUARDAR";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // button3
             // 
-            this.button5.Location = new System.Drawing.Point(672, 59);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 60);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "CANCELAR";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Image = global::AnalizadorLexicogrupo9.Properties.Resources._375;
+            this.button3.Location = new System.Drawing.Point(467, 54);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(85, 71);
+            this.button3.TabIndex = 5;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Image = global::AnalizadorLexicogrupo9.Properties.Resources._62319;
+            this.button2.Location = new System.Drawing.Point(192, 59);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 66);
+            this.button2.TabIndex = 3;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Image = global::AnalizadorLexicogrupo9.Properties.Resources._2919521;
+            this.button1.Location = new System.Drawing.Point(89, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 66);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
